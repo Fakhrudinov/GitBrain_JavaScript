@@ -1,0 +1,64 @@
+<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 2, task 1</title>
+    <script>
+		var a = 1, b = 1, c, d;
+		c = ++a; console.log(c);           // 2
+		d = b++; console.log(d);           // 1
+		c = (2+ ++a); console.log(c);      // 5
+		d = (2+ b++); console.log(d);      // 4
+		console.log(a);                    // 3
+		console.log(b);                    // 3
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 2, task 1</h3>
+    
+	<p>1. Дан код:
+	<br />
+	<br />var a = 1, 
+	<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b = 1, 
+	<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c, 
+	<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;d;
+	<br />
+	<br />c = ++a; alert(c);           // 2
+	<br />d = b++; alert(d);           // 1
+	<br />c = (2+ ++a); alert(c);      // 5
+	<br />d = (2+ b++); alert(d);      // 4
+	<br />alert(a);                    // 3
+	<br />alert(b);                    // 3
+    </p>
+	<p>Почему код даёт именно такие результаты?</p>
+	
+	<h3>Ответ</h3>
+	<p><strong>c = ++a; alert(c);           // 2</strong>
+	<br />Префиксная форма сначала делает вычисления, потом отдает значение переменной. 
+	<br />Т.е.: с = а + 1;
+	</p>
+	
+	<p><strong>d = b++; alert(d);           // 1</strong>
+	<br />Постфиксная форма сначала отдает переменную, потом проводит с ней действия. 
+	<br />Т.е.: d = b; b = b + 1;
+	</p>
+	
+	<p><strong>c = (2+ ++a); alert(c);      // 5</strong>
+	<br />Префиксная форма сначала делает вычисления, потом отдает значение переменной. 
+	<br />Т.е.: с = (2 + (a + 1));// где на начало вычислений 'а' уже было равно 2 из предыдущей строки.
+	</p>
+	
+	<p><strong>d = (2+ b++); alert(d);      // 4</strong>
+	<br />Постфиксная форма сначала отдает переменную, потом проводит с ней действия. 
+	<br />Т.е.: d = (2 + b); b = b + 1;// где на начало вычислений 'b' уже было равно 2 из предыдущей строки.
+	</p>
+	
+	<p><strong>alert(a);                    // 3</strong>
+	<br />Для переменной 'а' было 2 инкремента в предыдущих строках.
+	</p>
+	
+	<p><strong>alert(b);                    // 3</strong>
+	<br />Для переменной 'b' было 2 инкремента в предыдущих строках.
+	</p>
+
+</body>
+</html>
