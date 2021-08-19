@@ -1,0 +1,36 @@
+﻿<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 3, task 5</title>
+    <script>
+		//способ 1
+		let cells = "";
+		for(let i = 1; i <= 20; i++){
+			cells += "x";
+			console.log(cells);
+		}
+
+		//способ2
+		count = 1;
+		do {
+			console.log("x".padEnd(count, 'x'));
+			count++;
+		}while(count <= 20);
+
+		//способ3
+		for(let i = 1; i <= 20; console.log('x'.repeat(i)), i++){}
+
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 3, task 5</h3>
+    <p>5. *Нарисовать пирамиду с помощью console.log, как показано на рисунке, только у вашей пирамиды должно быть 20 рядов, а не 5:
+	<br />
+	<br />x
+	<br />xx
+	<br />xxx
+	<br />xxxx
+	<br />xxxxx
+    </p>
+</body>
+</html>
