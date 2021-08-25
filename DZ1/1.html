@@ -1,0 +1,27 @@
+﻿<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 1, task 1</title>
+    <script>
+        var tCelcius = prompt("Введите температуру в градусах по Цельсию");
+
+        if (isFinite(tCelcius)) {
+            let tFarengate = (9 / 5) * tCelcius + 32;
+
+            alert("В пересчете на градусы по Фаренгейту это будет " + tFarengate);
+        }
+        else {
+            alert("Что то не могу распознать введенное вами: " + tCelcius);
+        }
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 1, task 1</h3>
+    <p>
+        Задать температуру в градусах по Цельсию.
+        <br />Вывести в alert соответствующую температуру в градусах по Фаренгейту.
+        <br />Подсказка:
+        <br />расчёт идёт по формуле: Tf = (9 / 5) * Tc + 32, где Tf – температура по Фаренгейту, Tc – температура по Цельсию
+    </p>
+</body>
+</html>
