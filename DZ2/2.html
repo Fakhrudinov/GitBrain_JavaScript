@@ -1,0 +1,26 @@
+<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 2, task 2</title>
+    <script>
+		var a = 2;
+		var x = 1 + (a *= 2);
+		console.log(x);
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 2, task 2</h3>
+    <p>2. Чему будет равен x в примере ниже?
+	<br /> var a = 2;
+	<br /> var x = 1 + (a *= 2);
+    </p>
+	
+	<h3>Ответ = 5</h3>
+	<p><strong>var x = 1 + (a *= 2);// где а = 2</strong>
+	<br />операции в скобках имеют приоритет
+	<br />Т.е.: a = а * 2; x = 1 + a;
+	<br />Получим х = 1 + (2*2) = 5.
+	</p>
+	
+</body>
+</html>

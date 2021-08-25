@@ -1,0 +1,48 @@
+<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 2, task 7</title>
+    <script>
+		if( 0 == null ){
+			console.log("0 равно null");
+		}
+				
+		if( 0 != null ){
+			console.log("0 НЕ равен null");
+		}
+
+		if( 0 > null ){
+			console.log("0 больше null");
+		}
+
+		if( 0 < null ){
+			console.log("0 меньше null");
+		}
+
+		if( 0 >= null ){
+			console.log("0 больше или равно null");
+		}
+
+		if( 0 <= null ){
+			console.log("0 меньше или равно null");
+		}
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 2, task 7</h3>
+    <p>7. *Сравнить null и 0. Попробуйте объяснить результат.
+    </p>
+	<h3>Ответ</h3>
+	<p>
+	<br />0 НЕ равен null
+	<br />0 больше или равно null
+	<br />0 меньше или равно null
+	</p>
+	
+	<p><a href="https://habr.com/ru/company/ruvds/blog/337732/">https://habr.com/ru/company/ruvds/blog/337732/</a></p>
+	<p>Тут будут использоваться 2 типа алгоритмов сравнения - сравнение отношений и сравнение равенств</p>
+	<p>По алгоритму сравнения равенств (0 == null) в случае с null и числом - false возвращается как значение по умолчанию.</p>
+	<p>По алгоритму сравнения отношений (0 &lt; null или 0 &gt; null) null приводится к типу Number, c значением "+0" и получаем что 0 не больше(меньше) чем +0</p>
+	<p>По алгоритму сравнения отношений (0 &lt;= null или 0 &gt;= null) null приводится к типу Number, c значением "+0" и получаем что 0 не больше(меньше) чем +0, но второе условие на равенство тут выполняется, т.е. 0 == +0</p>
+</body>
+</html>

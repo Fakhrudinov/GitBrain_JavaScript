@@ -1,0 +1,42 @@
+<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 2, task 3</title>
+    <script>
+		let a = getRandomIntInclusive(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+		let b = getRandomIntInclusive(Number.MIN_SAFE_INTEGER, Number.MAX_SAFE_INTEGER);
+		console.log("a=" + a + " and b=" + b);
+
+		if(a >= 0 && b >= 0){//если a и b положительные, вывести их разность;
+			showResult("a and b is positive. Show a-b=" + (a-b));
+		}
+		else if(a < 0 && b < 0){ //если а и b отрицательные, вывести их произведение;
+			showResult("a and b is negative. Show a*b=" + (a*b));
+		}
+		else{//если а и b разных знаков, вывести их сумму;
+			showResult("a and b has different sign. Show a+b=" + (a+b));
+		}
+
+		function showResult(text) {
+			console.log(text);
+			alert(text); 
+		  }
+
+		function getRandomIntInclusive(min, max) {
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min + 1)) + min;
+		  }
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 2, task 3</h3>
+    <p>3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. </p>
+	<p>Затем написать скрипт, который работает по следующему принципу:</p>
+	<ul>
+		<li>если a и b положительные, вывести их разность;</li>
+		<li>если а и b отрицательные, вывести их произведение;</li>
+		<li>если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.</li>
+	</ul>
+</body>
+</html>
