@@ -1,0 +1,37 @@
+﻿<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 3, task 1</title>
+    <script>
+		let fromNumber = 0;
+		let tillNumber = 100;
+
+		console.log("Выводим простые числа от " + fromNumber + " до " + tillNumber);
+
+		while (fromNumber <= tillNumber) {
+
+			if(isItSimple(fromNumber)){
+				console.log("Простое число: " + fromNumber);
+			}
+
+			fromNumber++;
+		};
+
+		function isItSimple(num){
+
+			for (let i = 2; i < num; i++) {
+				if (num % i == 0) {
+					return false;
+				}
+			}
+
+			return true;
+		}
+    </script>
+</head>
+<body>
+    <h3>JavaScript lesson 3, task 1</h3>
+    <p>1. С помощью цикла while вывести все простые числа в промежутке от 0 до 100.</p>
+	<p><a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE">https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%BE%D1%81%D1%82%D0%BE%D0%B5_%D1%87%D0%B8%D1%81%D0%BB%D0%BE</a></p>
+</body>
+</html>
