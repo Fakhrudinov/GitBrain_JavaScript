@@ -1,0 +1,50 @@
+.chessTable{
+	border-Top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+
+.axisXtop{
+	border-bottom: 1px solid gray;
+}
+
+.axisY{
+	border-Right: 1px solid gray;
+	border-Left: 1px solid gray;
+}
+
+.axisXbottom{
+	border-Top: 1px solid gray;
+}
+
+.chessTable td{
+	width:25px;
+	height:25px;
+	text-align:center;
+}
+
+.chessTable .blackCell{
+	background-color: gray;
+	width:50px;
+	height:50px;
+	font-size:36;
+}
+
+.chessTable .blackCell:hover{
+	background-color: darkgray;
+}
+
+.chessTable .whiteCell{
+	font-size:36;
+}
+
+.chessTable .whiteCell:hover{
+	background-color: beige;
+}
+
+.chessTable td:nth-child(1) {
+	border-Left: 1px solid gray;
+}
+
+.chessTable td:nth-child(10) {
+	border-Right: 1px solid gray;
+}
