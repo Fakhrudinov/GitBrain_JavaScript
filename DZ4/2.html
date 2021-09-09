@@ -1,0 +1,46 @@
+<meta charset="utf-8" />
+<html>
+<head>
+    <title>JavaScript lesson 4, task 2</title>
+    <script src="2.js"></script>
+</head>
+<body>
+    <h3>JavaScript lesson 4, task 2</h3>
+    
+	<p>2. Для игры, реализованной на уроке, добавить возможность вывода хода номер n (номер задается пользователем)</p>
+	
+	<h3>Реализация</h3>
+	<button type="button" onclick="startGame()">Начать новую игру</button><br />
+	
+		<table>
+			<tr>
+				<td id="playerStats"></td>
+				<td>
+					<table>
+						<tr>
+							<td></td>
+							<td><button type="button" onclick="moveUp()" id="btnUp" disabled="">Up</button></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><button type="button" onclick="moveLeft()"  id="btnleft" disabled="">Left</button></td>
+							<td><button type="button" onclick="moveDown()"  id="btnDown" disabled="">Down</button></td>
+							<td><button type="button" onclick="moveRight()" id="btnRight" disabled="">Right</button></td>
+						</tr>
+					</table>				
+				</td>
+				<td id="cellMonsterDescription"></td>
+				<td id="cellEventDescription"></td>
+				<td>Запрос информации <br />о сделанных ходах<br />
+					ход №<input type="number" size="4" min="0" max="0" value="0" id="gameLogStepSelector">
+					<br />
+					<button type="button" onclick="getGameLogForStep()" id="btnGetLog" disabled="">Получить инфо</button>
+				</td>
+				<td id="gameLogInfo"></td>
+			</tr>
+	</table>
+	
+	<table id="gameScreen" border="1"></table>
+	
+</body>
+</html>
